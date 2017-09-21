@@ -45,7 +45,7 @@ public class Java8 {
         return numbers.stream().sorted().collect(Collectors.toList());
     }
 
-    public List<Integer> cutWithStreamEmpty(List<Integer> numbers) {
+    List<Integer> cutWithStreamEmpty(List<Integer> numbers) {
         return numbers.stream().limit(3).collect(Collectors.toList());
     }
 }
