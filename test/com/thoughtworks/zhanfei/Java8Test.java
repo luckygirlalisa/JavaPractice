@@ -64,4 +64,23 @@ public class Java8Test {
 
         assertEquals(Arrays.asList(1, 3, 9), positiveNumbers);
     }
+
+    @Test
+    public void shouldSortListWithStreamSorted() throws Exception {
+        List<Integer> numbers = Arrays.asList(1, -1, 0, 3, -2, 9);
+
+        List<Integer> sortedNumbers = java8.generateSortedNumbers(numbers);
+
+        assertEquals(Arrays.asList(-2, -1, 0, 1, 3, 9), sortedNumbers);
+    }
+
+    @Test
+    public void shouldCutListWithLimitedLength() throws Exception {
+        List<Integer> numbers = Arrays.asList(1, -1, 0, 3, -2, 9);
+
+        List<Integer> numbersWithLimitedLength = java8.cutWithStreamEmpty(numbers);
+
+        assertEquals(3, numbersWithLimitedLength.size());
+        assertEquals(Arrays.asList(1, -1, 0), numbersWithLimitedLength);
+    }
 }
