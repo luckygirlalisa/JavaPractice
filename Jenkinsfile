@@ -5,6 +5,7 @@ pipeline {
             steps {
                 echo 'Running script in build stage.'
                 sh 'echo $PATH'
+                sh '/Users/zfxiao/Documents/softwares/apache-maven-3.3.3/bin/mvn --version'
             }
         }
         stage('Functional Test') {
