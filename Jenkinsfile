@@ -1,5 +1,9 @@
 pipeline {
-    agent { docker 'maven:3.3.3' }
+    node {
+        echo "hello jenkinsfile"
+    }
+
+    agent {  }
     stages {
         stage('build') {
             steps {
