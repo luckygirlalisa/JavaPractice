@@ -1,7 +1,6 @@
 pipeline {
     environment {
         JAVA_HOME = '/Library/Java/JavaVirtualMachines/jdk1.8.0_74.jdk/Contents/Home'
-        MVN_HOME='~/Documents/softwares/apache-maven-3.3.3/bin'
     }
     agent any
     stages {
@@ -10,7 +9,7 @@ pipeline {
                 echo 'Running script in build stage.'
                 sh 'printenv'
                 sh 'echo $PATH'
-                withEnv(['PATH = $MVN_HOME:$PATH']) {
+                withEnv(['PATH+MVN_HOME=~/Documents/softwares/apache-maven-3.3.3/bin']) {
                     sh 'mvn --version'
                 }
             }
