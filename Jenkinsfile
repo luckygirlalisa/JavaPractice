@@ -4,6 +4,7 @@ pipeline {
         stage('build') {
             steps {
                 echo 'Running script in build stage.'
+                echo $PATH
             }
         }
         stage('Functional Test') {
