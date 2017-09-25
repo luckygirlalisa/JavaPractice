@@ -22,7 +22,7 @@ public class NumbersOperator {
         return operate(initialNumbers, number -> number % 2 == 0);
     }
 
-    private List<Integer> operate(List<Integer> initialNumbers, Predicate<Integer> even) {
-        return initialNumbers.stream().filter(even).collect(Collectors.toList());
+    private List<Integer> operate(List<Integer> initialNumbers, Predicate<Integer> predicate) {
+        return initialNumbers.stream().filter(predicate).collect(Collectors.toList());
     }
 }
