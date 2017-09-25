@@ -10,7 +10,6 @@ pipeline {
         stage('Functional Test') {
             steps {
                 echo 'Another stage: different level of test'
-                sh 'which mvn'
                 sh 'whoami'
                 sh 'pwd'
             }
