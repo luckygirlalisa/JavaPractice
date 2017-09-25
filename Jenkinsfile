@@ -1,8 +1,4 @@
 pipeline {
-    node {
-        echo "hello jenkinsfile"
-    }
-
     agent {  }
     stages {
         stage('build') {
